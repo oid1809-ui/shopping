@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="קניות">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#2f9e6b">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADP0lEQVR4nO3dy3HUQBSGUZlyPpASaxwOa5wSIbFwFRv8D3r14/acE4Dpkj5d9WhUw8vXXz82+MyX0QtgXuIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRB9Nrnn/n9/ef1P/Lt/e36H2G/SpPjlsLYr1Icmz76KhbHpo+O6sVBNyXjMDz6KBkHfYiDSBxELzP/16GP9xaeibVmchBNHYfZMNbUcTBW4Tg87WitcBy0Nnscth0DzR7HY+4sTdWOg6amfgj2lwnxrw43XJODSBwl9dmni4OoRhw+0A5RIw6GEEc93eaoOIjKxGHb0V+ZOPjQ8yIRB1GlONxZOqsUB52Jo5LOs1McRMXisO3oqVgc9CSOMvpPzXpxuLN0Uy8OuhFHDUPmpTiISsZh29FHyTjoQxwFjJqU4iCqGodtRwdV43geAy8DcRAVjsOdpbXCcdCaOKY2djqKg6h2HLYdTdWOg6bEMa/hc1EcRDV+MO6xBz8nN/ziK23xyeFnCK9YPA6uWCEO945GVoiDRtaPw7bjtPXj4LQVPsp+WHVCeNmHGYmDSBxE68Thacft1omD2y0Vh+Fxr6Xi2PRxq9Xi2Lbt2/ubRG6xzkMwbrfg5OAu4iASB5E4iF5HL6CrT7+57fzRZoY17PQsn1b++4V+h9MzwxoOeYrbyp5XPVq/DjLDGo5aP479R7zduZlhDScsHsfRY93i3MywhnNWjuPcUb733MywhtNWjoOLlo3jysV314U7wxquWDYOrhMHkTiIxEEkDiJxEC0bx5Uvse76AmyGNVyxbBxct3Ic5y6+ey/ZGdZw2spxbMePcouzMsMazlk8ju3IsW53VmZYwwnrx7HtO+Ktz8oMazjqWV4T/DDD+5szrGGn54qDQ57itsI54iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIj+AAslmL1YQGT1AAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADP0lEQVR4nO3dy3HUQBSGUZlyPpASaxwOa5wSIbFwFRv8D3r14/acE4Dpkj5d9WhUw8vXXz82+MyX0QtgXuIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRB9Nrnn/n9/ef1P/Lt/e36H2G/SpPjlsLYr1Icmz76KhbHpo+O6sVBNyXjMDz6KBkHfYiDSBxELzP/16GP9xaeibVmchBNHYfZMNbUcTBW4Tg87WitcBy0Nnscth0DzR7HY+4sTdWOg6amfgj2lwnxrw43XJODSBwl9dmni4OoRhw+0A5RIw6GEEc93eaoOIjKxGHb0V+ZOPjQ8yIRB1GlONxZOqsUB52Jo5LOs1McRMXisO3oqVgc9CSOMvpPzXpxuLN0Uy8OuhFHDUPmpTiISsZh29FHyTjoQxwFjJqU4iCqGodtRwdV43geAy8DcRAVjsOdpbXCcdCaOKY2djqKg6h2HLYdTdWOg6bEMa/hc1EcRDV+MO6xBz8nN/ziK23xyeFnCK9YPA6uWCEO945GVoiDRtaPw7bjtPXj4LQVPsp+WHVCeNmHGYmDSBxE68Thacft1omD2y0Vh+Fxr6Xi2PRxq9Xi2Lbt2/ubRG6xzkMwbrfg5OAu4iASB5E4iF5HL6CrT7+57fzRZoY17PQsn1b++4V+h9MzwxoOeYrbyp5XPVq/DjLDGo5aP479R7zduZlhDScsHsfRY93i3MywhnNWjuPcUb733MywhtNWjoOLlo3jysV314U7wxquWDYOrhMHkTiIxEEkDiJxEC0bx5Uvse76AmyGNVyxbBxct3Ic5y6+ey/ZGdZw2spxbMePcouzMsMazlk8ju3IsW53VmZYwwnrx7HtO+Ktz8oMazjqWV4T/DDD+5szrGGn54qDQ57itsI54iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIj+AAslmL1YQGT1AAAAAElFTkSuQmCC">
+<link rel="manifest" href="manifest.webmanifest">
+<title>רשימת קניות</title>
+<style>
+:root{--bg:#f3f6ef;--surface:#fff;--ink:#1f2a24;--mute:#6b7a70;--line:#e1e8dc;--accent:#2f9e6b;--accent-ink:#fff;--pop:#ff7a59;--soft:#e4f4ea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151c18;--surface:#202a24;--ink:#eef4ef;--mute:#9aaba0;--line:#2f3b34;--accent:#3dc088;--accent-ink:#0b1a12;--pop:#ff8f73;--soft:#1e3a2c}}
+:root[data-theme="dark"]{--bg:#151c18;--surface:#202a24;--ink:#eef4ef;--mute:#9aaba0;--line:#2f3b34;--accent:#3dc088;--accent-ink:#0b1a12;--pop:#ff8f73;--soft:#1e3a2c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Heebo","Rubik",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;min-height:100vh}
+.app{max-width:520px;margin:0 auto;padding:18px 16px 90px}
+h1{font-size:28px;margin:6px 0 2px;font-weight:800}
+.sub{color:var(--mute);font-size:14px;margin-bottom:14px}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:8px;transition:width .35s}
+.tabs{display:flex;background:var(--line);border-radius:14px;padding:4px;margin-bottom:14px}
+.tabs button{flex:1;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;padding:10px;border-radius:11px;cursor:pointer}
+.tabs button.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.add{display:flex;gap:8px;margin-bottom:14px}
+.add input{flex:1;min-width:0;font:inherit;font-size:17px;padding:14px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);outline:none}
+.add input:focus{border-color:var(--accent)}
+.add button{border:0;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:800;font-size:17px;padding:0 20px;border-radius:14px;cursor:pointer}
+.row{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+.chk{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);background:none;flex:none;cursor:pointer;display:grid;place-items:center;color:var(--accent-ink);font-size:16px}
+.row.done .chk{background:var(--accent);border-color:var(--accent)}
+.em{font-size:22px;flex:none}
+.t{flex:1;font-size:17px;word-break:break-word}
+.row.done .t{text-decoration:line-through;color:var(--mute)}
+.row.done .em{opacity:.4}
+.ic{border:0;background:none;font-size:22px;cursor:pointer;color:var(--mute);padding:4px 6px;line-height:1}
+.ic.star.on{color:var(--pop)}
+.pill{border:0;background:var(--soft);color:var(--accent);font:inherit;font-weight:700;padding:7px 12px;border-radius:10px;cursor:pointer}
+.pill:disabled{opacity:.5}
+.actions{display:flex;gap:8px;margin:14px 0}
+.btn{flex:1;border:2px dashed var(--line);background:none;color:var(--mute);font:inherit;font-weight:700;padding:12px;border-radius:14px;cursor:pointer}
+.btn.main{border:0;background:var(--pop);color:#fff}
+.empty{text-align:center;color:var(--mute);padding:36px 10px;line-height:1.7}
+.empty b{display:block;font-size:40px}
+.hint{color:var(--mute);font-size:13px;margin:0 2px 10px}
+.lnk{border:0;background:none;color:var(--accent);font:inherit;font-weight:700;padding:0 2px 12px;cursor:pointer}
+#imp{display:none;margin-bottom:14px}
+#imp textarea{width:100%;min-height:130px;font:inherit;font-size:16px;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);outline:none}
+#imp p{color:var(--mute);font-size:13px;margin:6px 2px 8px}
+.edt{flex:1;min-width:0;font:inherit;font-size:17px;padding:6px 8px;border-radius:10px;border:2px solid var(--accent);background:var(--bg);color:var(--ink);outline:none}
+.t[data-a=edit]{cursor:text}
+.pop{animation:pop .25s}
+@keyframes pop{from{transform:scale(.96);opacity:.5}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.pop{animation:none}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>🛒 הקניות שלי</h1>
+  <div class="sub" id="sub"></div>
+  <div class="bar"><i id="bar"></i></div>
+  <div class="tabs">
+    <button id="tl" class="on">הרשימה</button>
+    <button id="ts">⭐ קבועים</button>
+  </div>
+  <div class="add">
+    <input id="inp" placeholder="מה צריך לקנות?" enterkeyhint="done" autocomplete="off">
+    <button id="addb">הוסף</button>
+  </div>
+  <button class="lnk" id="impt">📋 הדבקת רשימה מוכנה</button>
+  <div id="imp"><textarea id="impx" placeholder="פריט בכל שורה"></textarea><p>שורה עם ~קו~ סביבה תסומן כנלקחה.</p><button class="btn main" id="impb" style="width:100%">הוסף לרשימה</button></div>
+  <div id="view"></div>
+</div>
+<script>
+var KEY="shopping-v1", tab="list", editing=null;
+function tx(x){return editing===x.id?'<input class="edt" id="ed" data-i="'+x.id+'" value="'+esc(x.t)+'" enterkeyhint="done">':'<span class="t" data-a="edit" data-i="'+x.id+'">'+esc(x.t)+'</span>'}
+function commit(cancel){if(editing===null)return;var i=editing,el=document.getElementById("ed");editing=null;var v=el?norm(el.value):"";if(!cancel&&v){S.list.concat(S.staples).forEach(function(x){if(x.id===i)x.t=v});save()}render()}
+var S={list:[],staples:[]};
+function parse(txt){var out=[];txt.split(/\n/).forEach(function(l){l=l.trim();if(!l)return;var dn=false;if(l.length>2&&l.charAt(0)==="~"&&l.charAt(l.length-1)==="~"){dn=true;l=l.slice(1,-1)}l=norm(l.replace(/^[-•*]\s*/,""));if(l&&!out.some(function(x){return x.t===l}))out.push({id:id(),t:l,done:dn})});return out}
+var SEED="";
+try{var raw=localStorage.getItem(KEY);if(raw){var p=JSON.parse(raw);if(p&&p.list&&p.staples)S=p}else{S.list=parse(SEED)}}catch(e){S.list=parse(SEED)}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+var EM=[["חלב","🥛"],["גבינ","🧀"],["לחם","🍞"],["ביצ","🥚"],["עגבני","🍅"],["מלפפון","🥒"],["בננ","🍌"],["תפוח","🍎"],["בשר","🥩"],["עוף","🍗"],["דג","🐟"],["אורז","🍚"],["פסטה","🍝"],["קפה","☕"],["תה","🍵"],["מים","💧"],["שוקולד","🍫"],["יוגורט","🥣"],["חמאה","🧈"],["שמן","🫒"],["גבינה","🧀"],["נייר","🧻"],["סבון","🧼"],["שמפו","🧴"],["יין","🍷"],["בירה","🍺"],["גלידה","🍦"],["תפוד","🥔"],["גזר","🥕"],["בצל","🧅"],["שום","🧄"],["לימון","🍋"],["פיצה","🍕"],["אבוקדו","🥑"],["ירק","🥬"],["פרי","🍇"]];
+function emo(t){for(var i=0;i<EM.length;i++)if(t.indexOf(EM[i][0])>-1)return EM[i][1];return "🛍️"}
+function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function norm(s){return s.trim().replace(/\s+/g," ")}
+function onList(t){return S.list.some(function(x){return x.t===t})}
+function inSt(t){return S.staples.some(function(x){return x.t===t})}
+function add(){
+  var inp=document.getElementById("inp"),t=norm(inp.value);if(!t)return;
+  if(tab==="list"){if(!onList(t))S.list.unshift({id:id(),t:t,done:false})}
+  else{if(!inSt(t))S.staples.push({id:id(),t:t})}
+  inp.value="";save();render();inp.focus();
+}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){
+  var tot=S.list.length,dn=S.list.filter(function(x){return x.done}).length;
+  document.getElementById("bar").style.width=(tot?dn/tot*100:0)+"%";
+  document.getElementById("sub").textContent=tot?(dn+" מתוך "+tot+" נלקחו"):"הרשימה ריקה";
+  document.getElementById("tl").className=tab==="list"?"on":"";
+  document.getElementById("ts").className=tab==="st"?"on":"";
+  document.getElementById("inp").placeholder=tab==="list"?"מה צריך לקנות?":"הוסיפי פריט קבוע (למשל: חלב)";
+  var h="";
+  if(tab==="list"){
+    var items=S.list.filter(function(x){return !x.done}).concat(S.list.filter(function(x){return x.done}));
+    if(!items.length)h='<div class="empty"><b>🧺</b>אין עדיין כלום ברשימה.<br>הקלידי פריט למעלה,<br>או הוסיפי מהקבועים ⭐</div>';
+    items.forEach(function(x){
+      h+='<div class="row '+(x.done?"done":"")+'"><button class="chk" data-a="tog" data-i="'+x.id+'">'+(x.done?"✓":"")+'</button><span class="em">'+emo(x.t)+'</span>'+tx(x)+'<button class="ic star '+(inSt(x.t)?"on":"")+'" data-a="star" data-i="'+x.id+'" aria-label="שמור כקבוע">'+(inSt(x.t)?"★":"☆")+'</button><button class="ic" data-a="edit" data-i="'+x.id+'" aria-label="ערוך">✎</button><button class="ic" data-a="del" data-i="'+x.id+'" aria-label="מחק">✕</button></div>';
+    });
+    if(dn)h+='<div class="actions"><button class="btn" data-a="clear">נקי את מה שנלקח ('+dn+')</button></div>';
+  }else{
+    var miss=S.staples.filter(function(x){return !onList(x.t)}).length;
+    h+='<p class="hint">הפריטים שאת קונה תמיד. לחיצה על ＋ מוסיפה לרשימה.</p>';
+    if(S.staples.length)h+='<div class="actions" style="margin-top:0"><button class="btn main" data-a="all" '+(miss?"":"disabled")+'>הוסף את כל הקבועים לרשימה'+(miss?" ("+miss+")":"")+'</button></div>';
+    if(!S.staples.length)h+='<div class="empty"><b>⭐</b>אין עדיין פריטים קבועים.<br>הקלידי אחד למעלה,<br>או לחצי ☆ ליד פריט ברשימה.</div>';
+    S.staples.forEach(function(x){
+      var has=onList(x.t);
+      h+='<div class="row"><span class="em">'+emo(x.t)+'</span>'+tx(x)+'<button class="pill" data-a="use" data-i="'+x.id+'" '+(has?"disabled":"")+'>'+(has?"ברשימה":"＋ הוסף")+'</button><button class="ic" data-a="edit" data-i="'+x.id+'" aria-label="ערוך">✎</button><button class="ic" data-a="dels" data-i="'+x.id+'" aria-label="מחק">✕</button></div>';
+    });
+  }
+  document.getElementById("view").innerHTML=h;
+  var ei=document.getElementById("ed");if(ei){ei.focus();ei.setSelectionRange(ei.value.length,ei.value.length)}
+}
+document.getElementById("view").addEventListener("click",function(e){
+  var b=e.target.closest("[data-a]");if(!b)return;
+  var a=b.dataset.a,i=b.dataset.i;
+  var it=S.list.filter(function(x){return x.id===i})[0];
+  if(a==="tog"&&it)it.done=!it.done;
+  else if(a==="del")S.list=S.list.filter(function(x){return x.id!==i});
+  else if(a==="star"&&it){if(inSt(it.t))S.staples=S.staples.filter(function(x){return x.t!==it.t});else S.staples.push({id:id(),t:it.t})}
+  else if(a==="clear")S.list=S.list.filter(function(x){return !x.done});
+  else if(a==="edit"){editing=i;render();return}
+  else if(a==="dels")S.staples=S.staples.filter(function(x){return x.id!==i});
+  else if(a==="use"){var s=S.staples.filter(function(x){return x.id===i})[0];if(s&&!onList(s.t))S.list.unshift({id:id(),t:s.t,done:false})}
+  else if(a==="all"){S.staples.forEach(function(s){if(!onList(s.t))S.list.push({id:id(),t:s.t,done:false})});tab="list"}
+  save();render();
+});
+document.getElementById("view").addEventListener("keydown",function(e){if(e.target.id!=="ed")return;if(e.key==="Enter"){e.preventDefault();commit(false)}else if(e.key==="Escape")commit(true)});
+document.getElementById("view").addEventListener("focusout",function(e){if(e.target.id==="ed")commit(false)});
+document.getElementById("addb").onclick=add;
+document.getElementById("impt").onclick=function(){var p=document.getElementById("imp");p.style.display=p.style.display==="block"?"none":"block"};
+document.getElementById("impb").onclick=function(){var x=document.getElementById("impx");parse(x.value).forEach(function(n){var e=S.list.filter(function(y){return y.t===n.t})[0];if(e){if(n.done)e.done=true}else S.list.push(n)});x.value="";document.getElementById("imp").style.display="none";tab="list";save();render()};
+document.getElementById("inp").addEventListener("keydown",function(e){if(e.key==="Enter")add()});
+document.getElementById("tl").onclick=function(){tab="list";render()};
+document.getElementById("ts").onclick=function(){tab="st";render()};
+render();
+if("serviceWorker" in navigator){try{navigator.serviceWorker.register("sw.js")}catch(e){}}
+</script>
+</body>
+</html>
